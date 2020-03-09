@@ -7,14 +7,14 @@ body{
 	display:none;
 }
 .parallax1 { 
-  /* The image used */
+
   background-image: url("../Photos/27022056_1514742035307456_8680414814326254669_o.jpg");
   
 
-  /* Full height */
+  
   height: 100%; 
 
-  /* Create the parallax scrolling effect */
+  
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
