@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+    	<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Moira Van Loon</title>
+    	<!-- Bootstrap -->
+		<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/popper.min.js"></script> 
+		<script src="js/bootstrap-4.0.0.js"></script>
+		<script src="js/jquery.malihu.PageScroll2id.min.js"></script>
+		<script src="js/audiojs/audio.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				$("body").fadeIn("2000");
+				$(".nav-div").slideDown();
+				$("header").animate({right: "20px",top: "43%"}, "slow", function(){
+					$(".sub-header").slideDown();
+				});
+				
+			/**	$(".about-link").click(function(evt){
+					evt.preventDefault();
+					$("this").scrollTo(document.getElementById('#about'), 800);
+
+				}); **/
+			}); //end document ready
+		</script>
+		<script>
+			audiojs.events.ready(function() {
+    			var as = audiojs.createAll();
+  			});
+		</script>
+	</head>
+  
+	<body>
+		
+  		<div class="parallax1" id="parallax1">
+			
+			<header class="bg-light p-4 rounded">
+				<h1 class="text-right display-1">Moira Van Loon</h1>
+				<h2 class="text-right sub-header">Sound Designer | Musician | Audio Engineer</h2>
+			</header>
+		  	
+				<div class="navbar-expand fixed-bottom nav-div">
+					<ul class="nav nav-justified bg-light mx-0">
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="#parallax1">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark about-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="#demos">Demos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="#resume">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+		</div>
+		
+		<div class="parallax2">
+			<a id="about"><h1 class="text-center text-light display-4 col-12 about m-0">About</h1></a>
+		</div>
+		
+		<div class="bio container col-12 p-0">
+			<p class="text-dark text-center">(text)</p>	
+		</div>
+		
+		<div class="parallax3">
+			<a id="demos"><h1 class="display-4 text-light demos text-center rounded p-2 col-12">Demos</h1></a>
+		</div>
+		
+		<div class="demo-container container col-12 p-0">
+			<div class="bugs">
+				<p class="text-center display-4">"Bugs"</p>
+				<audio id="bugs" src="Demos/Bugs.mp3" preload="auto"/>
+			</div>
+		</div>
+		
+		<div class="parallax4">
+			<a id="resume"><h1 class="display-4 text-light demos text-center rounded p-2 col-12">Resume</h1></a>
+			<p id="resume-link" class="text-center text-light mb-1"><a class="link" target="_blank" href="Resume Jan 2019.pdf">Open in a new tab</a></p>
+		</div>
+		
+		<div class="resume-container container col-12 position-relative">
+			<iframe class="d-block mx-auto" src="Resume Jan 2019.pdf" height=100% width="1200"></iframe>
+			
+		</div>
+		
+		<div class="parallax5">
+			<a id="contact"><h1 class="display-4 text-light demos text-center rounded p-2 col-12">Contact</h1></a>
+		</div>
+		
+		<div class="contact-container container col-12 p-2">
+			<form class="bg-light p-3 needs-validation col-8 d-block mx-auto rounded mt-3 ">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
+					<div class="valid-feedback">Valid.</div>
+    				<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+					<div class="valid-feedback">Valid.</div>
+    				<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="name">Message</label>
+					<textarea rows=3  type="text" class="form-control" id="message" name="message" required>
+						
+					</textarea>
+					<div class="valid-feedback">Valid.</div>
+    				<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>			
+			</form>
+		</div>
+		
+		<script>
+			(function($){
+        		$(window).on("load",function(){
+            		$(".nav-link").mPageScroll2id({ scrollSpeed: 1000});
+        		});
+    		})(jQuery);
+		</script>
+	</body>
+	
+</html>
